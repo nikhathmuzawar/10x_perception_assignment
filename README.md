@@ -15,7 +15,7 @@ pip install numpy opencv-python rosbags scipy
   
 ## Run the file:  
 ```bash
-python3 cude_angle.py
+python3 cube_angle.py
 ```
 ## Visualization:  
 Visualization (color overlay of detected planes) is enabled by default in:  
