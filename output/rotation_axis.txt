@@ -1,0 +1,6 @@
+Rotation Axis Vector (in camera frame):
+X: 0.992374
+Y: -0.098838
+Z: 0.073660
+
+As array: [0.992374, -0.098838, 0.073660]

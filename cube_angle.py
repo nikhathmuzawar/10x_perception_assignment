@@ -449,6 +449,20 @@ class CuboidRotationAnalyzer:
         
         print(f"\nResults table saved to: {csv_file}")
 
+        # Estimate and save rotation axis
+        rotation_axis = self.estimate_rotation_axis()
+        
+        if rotation_axis is not None:
+            axis_file = os.path.join(output_dir, "rotation_axis.txt")
+            with open(axis_file, 'w') as f:
+                f.write("Rotation Axis Vector (in camera frame):\n")
+                f.write(f"X: {rotation_axis[0]:.6f}\n")
+                f.write(f"Y: {rotation_axis[1]:.6f}\n")
+                f.write(f"Z: {rotation_axis[2]:.6f}\n")
+                f.write(f"\nAs array: [{rotation_axis[0]:.6f}, {rotation_axis[1]:.6f}, {rotation_axis[2]:.6f}]\n")
+            
+            print(f"Rotation axis saved to: {axis_file}")
+
 def main():
     bag_path = "New_assesment/depth/depth.db3" 
     # Check if bag exists (handle both .db3 file and directory)
